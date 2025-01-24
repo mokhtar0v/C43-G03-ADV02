@@ -102,6 +102,18 @@ namespace Session02_Advanced
             ///LinkedListNode<int> thirdnode = nums.AddBefore(fourthnode, 3);
             ///Console.WriteLine(thirdnode.Previous.Value);
             #endregion
+            #region Stack
+            ///Stack<int> nums = new Stack<int>();
+            ///nums.Push(1);
+            ///nums.Push(2);
+            ///nums.Push(3);
+            ///nums.Pop();
+            ///Console.WriteLine(nums.TryPop(out int Value01));
+            ///Console.WriteLine(nums.TryPop(out int Value02));
+            ///
+            ///Console.WriteLine(nums.TryPop(out int Value));
+            ///Console.WriteLine(Value);
+            #endregion
         }
     }
 }
