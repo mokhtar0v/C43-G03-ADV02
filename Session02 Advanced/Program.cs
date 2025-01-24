@@ -114,6 +114,22 @@ namespace Session02_Advanced
             ///Console.WriteLine(nums.TryPop(out int Value));
             ///Console.WriteLine(Value);
             #endregion
+            #region Queue
+            ///Queue<int> queue = new Queue<int>();
+            ///nums.Enqueue(1);
+            ///nums.Enqueue(2);
+            ///nums.Enqueue(3);
+            ///nums.Dequeue();
+            ///Console.WriteLine(nums.TryDequeue(out int Value01));
+            ///Console.WriteLine(nums.TryDequeue(out int Value02));
+            ///Console.WriteLine(nums.TryDequeue(out int Value03));
+            ///Console.WriteLine(nums.TryDequeue(out int Value04));
+            ///
+            ///Console.WriteLine(Value01);
+            ///Console.WriteLine(Value02);
+            ///Console.WriteLine(Value03);
+            ///Console.WriteLine(Value04);
+            #endregion
         }
     }
 }
