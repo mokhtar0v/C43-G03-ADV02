@@ -94,6 +94,14 @@ namespace Session02_Advanced
             ///int res = SumOfList(nums);
             ///Console.WriteLine(res);
             #endregion
+            #region Linked List
+            ///LinkedList<int> nums = new LinkedList<int>(); 
+            ///LinkedListNode<int> firstnode = nums.AddFirst(1);
+            ///LinkedListNode<int> fourthnode = nums.AddLast(4);
+            ///LinkedListNode<int> secondnode = nums.AddAfter(firstnode, 2);
+            ///LinkedListNode<int> thirdnode = nums.AddBefore(fourthnode, 3);
+            ///Console.WriteLine(thirdnode.Previous.Value);
+            #endregion
         }
     }
 }
