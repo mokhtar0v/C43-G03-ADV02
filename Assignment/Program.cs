@@ -45,6 +45,20 @@
                    (open == '[' && close == ']') ||
                    (open == '{' && close == '}');
         }
+        static int[] RemoveDuplicates(int[] arr)
+        {
+            List<int> uniqueList = new List<int>();
+
+            foreach (int num in arr)
+            {
+                if (!uniqueList.Contains(num))
+                {
+                    uniqueList.Add(num);
+                }
+            }
+
+            return uniqueList.ToArray();
+        }
         static void Main(string[] args)
         {
             #region Question01
@@ -117,6 +131,17 @@
             //else
             //{
             //    Console.WriteLine("Not Balanced");
+            //} 
+            #endregion
+
+            #region Question05
+            //int N = int.Parse(Console.ReadLine());
+            //int[] arr = Console.ReadLine().Split().Select(int.Parse).ToArray();
+            //int[] uniqueArr = RemoveDuplicates(arr);
+            //Console.WriteLine("Array without duplicates:");
+            //foreach (int num in uniqueArr)
+            //{
+            //    Console.Write(num + " ");
             //} 
             #endregion
         }
