@@ -73,6 +73,26 @@
 
             return OddList.ToArray();
         }
+        public static bool HasSubarrayWithSum(List<int> List, int target)
+        {
+            int currentSum = 0;
+            int start = 0;
+
+            for (int end = 0; end < List.Count; end++)
+            {
+                currentSum += List[end];
+                while (currentSum > target && start <= end)
+                {
+                    currentSum -= List[start];
+                    start++;
+                }
+                if (currentSum == target)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
         static void Main(string[] args)
         {
             #region Question01
@@ -180,6 +200,14 @@
             //{
             //    Console.WriteLine(item);
             //}
+            #endregion
+
+            #region Question10
+            //List<int> arr = new List<int> { 1, 2, 3, 7, 5 };
+            //int target = 12;
+
+            //bool result = HasSubarrayWithSum(arr, target);
+            //Console.WriteLine($"Subarray with sum {target}: {result}");
             #endregion
 
         }
