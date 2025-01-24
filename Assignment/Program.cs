@@ -14,6 +14,37 @@
                 queue.Enqueue(stack.Pop());
             }
         }
+        static bool IsBalanced(string s)
+        {
+            Stack<char> stack = new Stack<char>();
+
+            foreach (char ch in s)
+            {
+                if (ch == '(' || ch == '[' || ch == '{')
+                {
+                    stack.Push(ch);
+                }
+                else if (ch == ')' || ch == ']' || ch == '}')
+                {
+                    if (stack.Count == 0)
+                    {
+                        return false;
+                    }
+                    char top = stack.Pop();
+                    if (!IsMatchingPair(top, ch))
+                    {
+                        return false;
+                    }
+                }
+            }
+            return stack.Count == 0;
+        }
+        static bool IsMatchingPair(char open, char close)
+        {
+            return (open == '(' && close == ')') ||
+                   (open == '[' && close == ']') ||
+                   (open == '{' && close == '}');
+        }
         static void Main(string[] args)
         {
             #region Question01
@@ -74,6 +105,18 @@
             //foreach (int q in queue)
             //{
             //    Console.WriteLine(q);
+            //} 
+            #endregion
+
+            #region Question04
+            //string? input = Console.ReadLine();
+            //if (IsBalanced(input))
+            //{
+            //    Console.WriteLine("Balanced");
+            //}
+            //else
+            //{
+            //    Console.WriteLine("Not Balanced");
             //} 
             #endregion
         }
