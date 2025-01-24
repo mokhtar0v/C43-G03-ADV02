@@ -93,6 +93,24 @@
             }
             return false;
         }
+        public static Queue<int> ReverseKElements(Queue<int> queue, int k)
+        {
+            Stack<int> stack = new Stack<int>();
+            for (int i = 0; i < k; i++)
+            {
+                stack.Push(queue.Dequeue());
+            }
+            while (stack.Count > 0)
+            {
+                queue.Enqueue(stack.Pop());
+            }
+            int remaining = queue.Count - k;
+            for (int i = 0; i < remaining; i++)
+            {
+                queue.Enqueue(queue.Dequeue());
+            }
+            return queue;
+        }
         static void Main(string[] args)
         {
             #region Question01
@@ -210,6 +228,23 @@
             //Console.WriteLine($"Subarray with sum {target}: {result}");
             #endregion
 
+            #region Question11
+            //Queue<int> queue = new Queue<int>();
+            //queue.Enqueue(1);
+            //queue.Enqueue(2);
+            //queue.Enqueue(3);
+            //queue.Enqueue(4);
+            //queue.Enqueue(5);
+
+            //int k = 3;
+            //Queue<int> resultQueue = ReverseKElements(queue, k);
+
+            //Console.WriteLine($"Queue after reversing first {k} elements:");
+            //foreach (int item in resultQueue)
+            //{
+            //    Console.WriteLine(item);
+            //} 
+            #endregion
         }
     }
 }
