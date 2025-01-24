@@ -59,6 +59,20 @@
 
             return uniqueList.ToArray();
         }
+        static int[] RemoveOdd(int[] arr)
+        {
+            List<int> OddList = new List<int>();
+
+            foreach (int num in arr)
+            {
+                if (num % 2 != 0)
+                {
+                    OddList.Add(num);
+                }
+            }
+
+            return OddList.ToArray();
+        }
         static void Main(string[] args)
         {
             #region Question01
@@ -144,6 +158,18 @@
             //    Console.Write(num + " ");
             //} 
             #endregion
+
+            #region Question06
+            //int N = int.Parse(Console.ReadLine());
+            //int[] arr = Console.ReadLine().Split().Select(int.Parse).ToArray();
+            //int[] uniqueArr = RemoveOdd(arr);
+            //Console.WriteLine("Array without Odd Numbers:");
+            //foreach (int num in uniqueArr)
+            //{
+            //    Console.Write(num + " ");
+            //}  
+            #endregion
+
         }
     }
 }
