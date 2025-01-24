@@ -2,6 +2,18 @@
 {
     internal class Program
     {
+        static void ReverseQueue(Queue<int> queue)
+        {
+            Stack<int> stack = new Stack<int>();
+            while (queue.Count > 0)
+            {
+                stack.Push(queue.Dequeue());
+            }
+            while (stack.Count > 0)
+            {
+                queue.Enqueue(stack.Pop());
+            }
+        }
         static void Main(string[] args)
         {
             #region Question01
@@ -33,22 +45,37 @@
             #endregion
 
             #region Question02
-            int N = int.Parse(Console.ReadLine());
-            List<int> arr = Console.ReadLine().Split().Select(int.Parse).ToList();
-            bool Flag = true;
-            for (int i = 0; i < N / 2; i++)
-            {
-                if (arr[i] != arr[N - 1 - i])
-                {
-                    Flag = false;
-                    break;
-                }
-            }
-            if (Flag) Console.WriteLine("YES");
-            else Console.WriteLine("NO"); 
+            //int N = int.Parse(Console.ReadLine());
+            //List<int> arr = Console.ReadLine().Split().Select(int.Parse).ToList();
+            //bool Flag = true;
+            //for (int i = 0; i < N / 2; i++)
+            //{
+            //    if (arr[i] != arr[N - 1 - i])
+            //    {
+            //        Flag = false;
+            //        break;
+            //    }
+            //}
+            //if (Flag) Console.WriteLine("YES");
+            //else Console.WriteLine("NO");
             #endregion
 
+            #region Question03
+            //Queue<int> queue = new Queue<int>();
+            //queue.Enqueue(1);
+            //queue.Enqueue(2);
+            //queue.Enqueue(3);
+            //queue.Enqueue(4);
+            //queue.Enqueue(5);
 
+            //ReverseQueue(queue);
+
+            //Console.WriteLine("Reversed Queue: ");
+            //foreach (int q in queue)
+            //{
+            //    Console.WriteLine(q);
+            //} 
+            #endregion
         }
     }
 }
