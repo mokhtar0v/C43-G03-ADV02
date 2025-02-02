@@ -214,82 +214,85 @@ namespace Assignment
             #endregion
 
             #region Question05
-        //    int N = int.Parse(Console.ReadLine());
-        //    List<int> arr = Console.ReadLine().Split().Select(int.Parse).ToList();
-        //    arr.Sort();
-        //    int Q = int.Parse(Console.ReadLine());
-        //    for (int i = 0; i < Q; i++)
-        //    {
-        //        int X = int.Parse(Console.ReadLine());
-        //        int index = arr.BinarySearch(X);
-        //        if (index < 0)
-        //        {
-        //            index = ~index;
-        //        }
-        //        else
-        //        {
-        //            index++;
-        //            while (index < N && arr[index] == X)
-        //            {
-        //                index++;
-        //            }
-        //        }
-        //        int count = N - index;
-        //        Console.WriteLine(count);
-        //    }
-        //}
-        #endregion
+            //    int N = int.Parse(Console.ReadLine());
+            //    List<int> arr = Console.ReadLine().Split().Select(int.Parse).ToList();
+            //    arr.Sort();
+            //    int Q = int.Parse(Console.ReadLine());
+            //    for (int i = 0; i < Q; i++)
+            //    {
+            //        int X = int.Parse(Console.ReadLine());
+            //        int index = arr.BinarySearch(X);
+            //        if (index < 0)
+            //        {
+            //            index = ~index;
+            //        }
+            //        else
+            //        {
+            //            index++;
+            //            while (index < N && arr[index] == X)
+            //            {
+            //                index++;
+            //            }
+            //        }
+            //        int count = N - index;
+            //        Console.WriteLine(count);
+            //    }
+            #endregion
 
-        #region Question06
-        //int N = int.Parse(Console.ReadLine());
-        //int[] arr = Console.ReadLine().Split().Select(int.Parse).ToArray();
-        //int[] uniqueArr = RemoveOdd(arr);
-        //Console.WriteLine("Array without Odd Numbers:");
-        //foreach (int num in uniqueArr)
-        //{
-        //    Console.Write(num + " ");
-        //}  
-        #endregion
+            #region Question06
+            //int N = int.Parse(Console.ReadLine());
+            //List<int> arr = Console.ReadLine().Split().Select(int.Parse).ToList();
+            //bool isPalindrome = true;
+            //for (int i = 0; i < N / 2; i++)
+            //{
+            //    if (arr[i] != arr[N - 1 - i])
+            //    {
+            //        isPalindrome = false;
+            //        break;
+            //    }
+            //}
+            //Console.WriteLine(isPalindrome ? "YES" : "NO");
+            #endregion
 
-        #region Question07
-        //Queue<object> queue = new Queue<object>();
-        //queue.Enqueue(1);
-        //queue.Enqueue("Apple");     
-        //queue.Enqueue(5.28);        
-        //Console.WriteLine("Queue contents:");
-        //foreach (var item in queue)
-        //{
-        //    Console.WriteLine(item);
-        //}
-        #endregion
+            #region Question07
+            //Queue<object> queue = new Queue<object>();
+            //queue.Enqueue(1);
+            //queue.Enqueue("Apple");     
+            //queue.Enqueue(5.28);        
+            //Console.WriteLine("Queue contents:");
+            //foreach (var item in queue)
+            //{
+            //    Console.WriteLine(item);
+            //}
+            #endregion
 
-        #region Question10
-        //List<int> arr = new List<int> { 1, 2, 3, 7, 5 };
-        //int target = 12;
+            #region Question10
+            //List<int> arr = new List<int> { 1, 2, 3, 7, 5 };
+            //int target = 12;
 
-        //bool result = HasSubarrayWithSum(arr, target);
-        //Console.WriteLine($"Subarray with sum {target}: {result}");
-        #endregion
+            //bool result = HasSubarrayWithSum(arr, target);
+            //Console.WriteLine($"Subarray with sum {target}: {result}");
+            #endregion
 
-        #region Question11
-        //Queue<int> queue = new Queue<int>();
-        //queue.Enqueue(1);
-        //queue.Enqueue(2);
-        //queue.Enqueue(3);
-        //queue.Enqueue(4);
-        //queue.Enqueue(5);
+            #region Question11
+            //Queue<int> queue = new Queue<int>();
+            //queue.Enqueue(1);
+            //queue.Enqueue(2);
+            //queue.Enqueue(3);
+            //queue.Enqueue(4);
+            //queue.Enqueue(5);
 
-        //int k = 3;
-        //Queue<int> resultQueue = ReverseKElements(queue, k);
+            //int k = 3;
+            //Queue<int> resultQueue = ReverseKElements(queue, k);
 
-        //Console.WriteLine($"Queue after reversing first {k} elements:");
-        //foreach (int item in resultQueue)
-        //{
-        //    Console.WriteLine(item);
-        //} 
-        #endregion
+            //Console.WriteLine($"Queue after reversing first {k} elements:");
+            //foreach (int item in resultQueue)
+            //{
+            //    Console.WriteLine(item);
+            //} 
+            #endregion
 
 
-    }
+        }
     }
 }
