@@ -37,7 +37,15 @@ namespace Assignment
 
             // Return the list of even numbers
             return evenNumbers;
-        } 
+        }
+        #endregion
+        #region Question03 Updated
+        public static void Swap(ref int a, ref int b)
+        {
+            int temp = a;
+            a = b;
+            b = temp;
+        }
         #endregion
         static void ReverseQueue(Queue<int> queue)
         {
@@ -179,20 +187,18 @@ namespace Assignment
             #endregion
 
             #region Question03
-            //Queue<int> queue = new Queue<int>();
-            //queue.Enqueue(1);
-            //queue.Enqueue(2);
-            //queue.Enqueue(3);
-            //queue.Enqueue(4);
-            //queue.Enqueue(5);
-
-            //ReverseQueue(queue);
-
-            //Console.WriteLine("Reversed Queue: ");
-            //foreach (int q in queue)
+            //int[] arr = { 64, 34, 25, 12, 22, 11, 90 };
+            //Console.WriteLine("Before Sort:");
+            //for (int i = 0; i < arr.Length; i++)
             //{
-            //    Console.WriteLine(q);
-            //} 
+            //    Console.WriteLine(arr[i]);
+            //}
+            //BubbleSort(arr);
+            //Console.WriteLine("After Sort:");
+            //for (int i = 0; i < arr.Length; i++)
+            //{
+            //    Console.WriteLine(arr[i]);
+            //}
             #endregion
 
             #region Question04
