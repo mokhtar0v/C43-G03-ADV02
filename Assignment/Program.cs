@@ -4,6 +4,7 @@ namespace Assignment
 {
     internal class Program
     {
+        #region Question01 Updated
         public static void ReverseInPlace(ArrayList list)
         {
             int left = 0, right = list.Count - 1;
@@ -16,6 +17,28 @@ namespace Assignment
                 right--;
             }
         }
+        #endregion
+        #region Question02 Updated
+        static List<int> GetEvenNumbers(List<int> numbers)
+        {
+            // Create a new list to store even numbers
+            List<int> evenNumbers = new List<int>();
+
+            // Iterate through the input list
+            foreach (int num in numbers)
+            {
+                // Check if the number is even
+                if (num % 2 == 0)
+                {
+                    // Add the even number to the new list
+                    evenNumbers.Add(num);
+                }
+            }
+
+            // Return the list of even numbers
+            return evenNumbers;
+        } 
+        #endregion
         static void ReverseQueue(Queue<int> queue)
         {
             Stack<int> stack = new Stack<int>();
@@ -142,19 +165,17 @@ namespace Assignment
             #endregion
 
             #region Question02
-            //int N = int.Parse(Console.ReadLine());
-            //List<int> arr = Console.ReadLine().Split().Select(int.Parse).ToList();
-            //bool Flag = true;
-            //for (int i = 0; i < N / 2; i++)
+            //int size = int.Parse(Console.ReadLine());
+            //List<int> list = new List<int>(size);
+            //for (int i = 0;list.Count > i; i++)
             //{
-            //    if (arr[i] != arr[N - 1 - i])
-            //    {
-            //        Flag = false;
-            //        break;
-            //    }
+            //    list.Add(i);
             //}
-            //if (Flag) Console.WriteLine("YES");
-            //else Console.WriteLine("NO");
+            //List<int> evennum = GetEvenNumbers(list);
+            //foreach (int num in evennum)
+            //{
+            //    Console.WriteLine(num);
+            //}
             #endregion
 
             #region Question03
