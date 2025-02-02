@@ -1,7 +1,52 @@
-﻿namespace Assignment
+﻿using System.Collections;
+
+namespace Assignment
 {
     internal class Program
     {
+        #region Question01 Updated
+        public static void ReverseInPlace(ArrayList list)
+        {
+            int left = 0, right = list.Count - 1;
+            while (left < right)
+            {
+                object temp = list[left];
+                list[left] = list[right];
+                list[right] = temp;
+                left++;
+                right--;
+            }
+        }
+        #endregion
+        #region Question02 Updated
+        static List<int> GetEvenNumbers(List<int> numbers)
+        {
+            // Create a new list to store even numbers
+            List<int> evenNumbers = new List<int>();
+
+            // Iterate through the input list
+            foreach (int num in numbers)
+            {
+                // Check if the number is even
+                if (num % 2 == 0)
+                {
+                    // Add the even number to the new list
+                    evenNumbers.Add(num);
+                }
+            }
+
+            // Return the list of even numbers
+            return evenNumbers;
+        }
+        #endregion
+        #region Question03 Updated
+        public static void Swap(ref int a, ref int b)
+        {
+            int temp = a;
+            a = b;
+            b = temp;
+        }
+        #endregion
         static void ReverseQueue(Queue<int> queue)
         {
             Stack<int> stack = new Stack<int>();
@@ -114,64 +159,46 @@
         static void Main(string[] args)
         {
             #region Question01
-            //    int N = int.Parse(Console.ReadLine());
-            //    List<int> arr = Console.ReadLine().Split().Select(int.Parse).ToList();
-            //    arr.Sort();
-            //    int Q = int.Parse(Console.ReadLine());
-            //    for (int i = 0; i < Q; i++)
-            //    {
-            //        int X = int.Parse(Console.ReadLine());
-            //        int index = arr.BinarySearch(X);
-
-            //        if (index < 0)
-            //        {
-            //            index = ~index;
-            //        }
-            //        else
-            //        {
-            //            index++;
-            //            while (index < N && arr[index] == X)
-            //            {
-            //                index++;
-            //            }
-            //        }
-            //        int count = N - index;
-            //        Console.WriteLine(count);
-            //    }
-            //} 
+            //ArrayList list = new ArrayList { 1, 2, 3, 4, 5 };
+            //for (int i = 0; i < list.length; ++i)
+            //{
+            //    Console.WriteLine(list[i]);
+            //}
+            //ReverseInPlace(list);
+            //Console.WriteLine("Reversed ArrayList:");
+            //for (int i = 0; i < list.length; ++i)
+            //{
+            //    Console.WriteLine(list[i]);
+            //}
             #endregion
 
             #region Question02
-            //int N = int.Parse(Console.ReadLine());
-            //List<int> arr = Console.ReadLine().Split().Select(int.Parse).ToList();
-            //bool Flag = true;
-            //for (int i = 0; i < N / 2; i++)
+            //int size = int.Parse(Console.ReadLine());
+            //List<int> list = new List<int>(size);
+            //for (int i = 0;list.Count > i; i++)
             //{
-            //    if (arr[i] != arr[N - 1 - i])
-            //    {
-            //        Flag = false;
-            //        break;
-            //    }
+            //    list.Add(i);
             //}
-            //if (Flag) Console.WriteLine("YES");
-            //else Console.WriteLine("NO");
+            //List<int> evennum = GetEvenNumbers(list);
+            //foreach (int num in evennum)
+            //{
+            //    Console.WriteLine(num);
+            //}
             #endregion
 
             #region Question03
-            //Queue<int> queue = new Queue<int>();
-            //queue.Enqueue(1);
-            //queue.Enqueue(2);
-            //queue.Enqueue(3);
-            //queue.Enqueue(4);
-            //queue.Enqueue(5);
-
-            //ReverseQueue(queue);
-
-            //Console.WriteLine("Reversed Queue: ");
-            //foreach (int q in queue)
+            //int[] arr = { 64, 34, 25, 12, 22, 11, 90 };
+            //Console.WriteLine("Before Sort:");
+            //for (int i = 0; i < arr.Length; i++)
             //{
-            //    Console.WriteLine(q);
-            //} 
+            //    Console.WriteLine(arr[i]);
+            //}
+            //BubbleSort(arr);
+            //Console.WriteLine("After Sort:");
+            //for (int i = 0; i < arr.Length; i++)
+            //{
+            //    Console.WriteLine(arr[i]);
+            //}
             #endregion
 
             #region Question04
@@ -187,6 +214,47 @@
             #endregion
 
             #region Question05
+            //    int N = int.Parse(Console.ReadLine());
+            //    List<int> arr = Console.ReadLine().Split().Select(int.Parse).ToList();
+            //    arr.Sort();
+            //    int Q = int.Parse(Console.ReadLine());
+            //    for (int i = 0; i < Q; i++)
+            //    {
+            //        int X = int.Parse(Console.ReadLine());
+            //        int index = arr.BinarySearch(X);
+            //        if (index < 0)
+            //        {
+            //            index = ~index;
+            //        }
+            //        else
+            //        {
+            //            index++;
+            //            while (index < N && arr[index] == X)
+            //            {
+            //                index++;
+            //            }
+            //        }
+            //        int count = N - index;
+            //        Console.WriteLine(count);
+            //    }
+            #endregion
+
+            #region Question06
+            //int N = int.Parse(Console.ReadLine());
+            //List<int> arr = Console.ReadLine().Split().Select(int.Parse).ToList();
+            //bool isPalindrome = true;
+            //for (int i = 0; i < N / 2; i++)
+            //{
+            //    if (arr[i] != arr[N - 1 - i])
+            //    {
+            //        isPalindrome = false;
+            //        break;
+            //    }
+            //}
+            //Console.WriteLine(isPalindrome ? "YES" : "NO");
+            #endregion
+
+            #region Question07
             //int N = int.Parse(Console.ReadLine());
             //int[] arr = Console.ReadLine().Split().Select(int.Parse).ToArray();
             //int[] uniqueArr = RemoveDuplicates(arr);
@@ -197,7 +265,7 @@
             //} 
             #endregion
 
-            #region Question06
+            #region Question08
             //int N = int.Parse(Console.ReadLine());
             //int[] arr = Console.ReadLine().Split().Select(int.Parse).ToArray();
             //int[] uniqueArr = RemoveOdd(arr);
@@ -205,18 +273,6 @@
             //foreach (int num in uniqueArr)
             //{
             //    Console.Write(num + " ");
-            //}  
-            #endregion
-
-            #region Question07
-            //Queue<object> queue = new Queue<object>();
-            //queue.Enqueue(1);
-            //queue.Enqueue("Apple");     
-            //queue.Enqueue(5.28);        
-            //Console.WriteLine("Queue contents:");
-            //foreach (var item in queue)
-            //{
-            //    Console.WriteLine(item);
             //}
             #endregion
 
@@ -245,6 +301,8 @@
             //    Console.WriteLine(item);
             //} 
             #endregion
+
+
         }
     }
 }
