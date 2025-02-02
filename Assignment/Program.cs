@@ -1,7 +1,21 @@
-﻿namespace Assignment
+﻿using System.Collections;
+
+namespace Assignment
 {
     internal class Program
     {
+        public static void ReverseInPlace(ArrayList list)
+        {
+            int left = 0, right = list.Count - 1;
+            while (left < right)
+            {
+                object temp = list[left];
+                list[left] = list[right];
+                list[right] = temp;
+                left++;
+                right--;
+            }
+        }
         static void ReverseQueue(Queue<int> queue)
         {
             Stack<int> stack = new Stack<int>();
@@ -114,31 +128,17 @@
         static void Main(string[] args)
         {
             #region Question01
-            //    int N = int.Parse(Console.ReadLine());
-            //    List<int> arr = Console.ReadLine().Split().Select(int.Parse).ToList();
-            //    arr.Sort();
-            //    int Q = int.Parse(Console.ReadLine());
-            //    for (int i = 0; i < Q; i++)
-            //    {
-            //        int X = int.Parse(Console.ReadLine());
-            //        int index = arr.BinarySearch(X);
-
-            //        if (index < 0)
-            //        {
-            //            index = ~index;
-            //        }
-            //        else
-            //        {
-            //            index++;
-            //            while (index < N && arr[index] == X)
-            //            {
-            //                index++;
-            //            }
-            //        }
-            //        int count = N - index;
-            //        Console.WriteLine(count);
-            //    }
-            //} 
+            //ArrayList list = new ArrayList { 1, 2, 3, 4, 5 };
+            //for (int i = 0; i < list.length; ++i)
+            //{
+            //    Console.WriteLine(list[i]);
+            //}
+            //ReverseInPlace(list);
+            //Console.WriteLine("Reversed ArrayList:");
+            //for (int i = 0; i < list.length; ++i)
+            //{
+            //    Console.WriteLine(list[i]);
+            //}
             #endregion
 
             #region Question02
@@ -245,6 +245,8 @@
             //    Console.WriteLine(item);
             //} 
             #endregion
+
+
         }
     }
 }
