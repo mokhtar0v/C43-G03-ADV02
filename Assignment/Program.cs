@@ -265,6 +265,17 @@ namespace Assignment
             //} 
             #endregion
 
+            #region Question08
+            //int N = int.Parse(Console.ReadLine());
+            //int[] arr = Console.ReadLine().Split().Select(int.Parse).ToArray();
+            //int[] uniqueArr = RemoveOdd(arr);
+            //Console.WriteLine("Array without Odd Numbers:");
+            //foreach (int num in uniqueArr)
+            //{
+            //    Console.Write(num + " ");
+            //}
+            #endregion
+
             #region Question10
             //List<int> arr = new List<int> { 1, 2, 3, 7, 5 };
             //int target = 12;
