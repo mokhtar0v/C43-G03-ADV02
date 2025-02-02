@@ -255,15 +255,14 @@ namespace Assignment
             #endregion
 
             #region Question07
-            //Queue<object> queue = new Queue<object>();
-            //queue.Enqueue(1);
-            //queue.Enqueue("Apple");     
-            //queue.Enqueue(5.28);        
-            //Console.WriteLine("Queue contents:");
-            //foreach (var item in queue)
+            //int N = int.Parse(Console.ReadLine());
+            //int[] arr = Console.ReadLine().Split().Select(int.Parse).ToArray();
+            //int[] uniqueArr = RemoveDuplicates(arr);
+            //Console.WriteLine("Array without duplicates:");
+            //foreach (int num in uniqueArr)
             //{
-            //    Console.WriteLine(item);
-            //}
+            //    Console.Write(num + " ");
+            //} 
             #endregion
 
             #region Question10
